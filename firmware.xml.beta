@@ -1,0 +1,257 @@
+<boards>
+  <!--
+     Firmware for the RepRap Motherboard v1.1 and v1.2.
+    -->
+  <board name="RepRap Motherboard v1.X (Gen3)">
+    <version major="1" minor="1"/>
+    <version major="1" minor="2"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>38400</speed>
+      <arch>m644p</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/MB-rrmbv12-v2.4.hex"
+       name="v2.4"
+       description="This update uses an alternate RS485 strategy to improve reliability."
+       />
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/MB-rrmbv12-v2.3r0.hex"
+       name="v2.3 release 0"
+       description="This update adds addition bus retries for machines that still have packet dropouts."
+       />
+    <firmware
+       major="2"
+       minor="2"
+       relpath="firmware/MB-rrmbv12-v2.2r0.hex"
+       name="v2.2 release 0"
+       description="This update adds RS485 bus retries, which should improve reliability for many machines that have had trouble with dropped packets."
+       />
+    <firmware
+       major="2"
+       minor="1"
+       relpath="firmware/MB-rrmbv12-v2.1r1.hex"
+       name="v2.1 release 1"
+       description="This is the inital release of the v2.1 firmware for the motherboard.  This is a maintenance release and includes a number of small bug fixes which should improve reliability for very long print sessions and allow printing from SD cards with filesystem glitches."
+       />
+    <firmware
+       name="v1.6"
+       major="1"
+       minor="6"
+       relpath="firmware/SanguinoMaster-v1.6.hex"/>
+  </board>
+
+  <board name="MakerBot Motherboard v2.X (Gen4)" icon="icon-mb24.png">
+    <version major="2" minor="4"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>57600</speed>
+      <arch>m1280</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="8"
+       relpath="firmware/MB-mb24-v2.8-rc1.hex"
+       name="v2.8 RC1"
+       description="Firmware version 2.8 release candidate 1"
+       />
+    <firmware
+       major="2"
+       minor="9"
+       relpath="firmware/MB-mb24-v2.9.hex"
+       name="v2.9"
+       description="Firmware version 2.9"
+       />
+    <firmware
+       major="2"
+       minor="92"
+       relpath="firmware/MB-mb24-v2.92.hex"
+       name="v2.92"
+       description="Firmware version 2.9"
+       />
+
+    <firmware
+       major="2"
+       minor="9"
+       relpath="firmware/MB-mb24-v2.9-charles-1280.hex"
+       name="v2.9 (Slow SD)"
+       description="The v2.9 firmware for Generation 4 motherboards with Mega 2560, with the SD communications slowed by a factor of 8."
+       />
+  </board>
+
+  <board name="MakerBot Motherboard v2.X (Gen4) with Mega 2560" icon="icon-mb24.png">
+    <version major="2" minor="4"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v2</protocol>
+      <speed>115200</speed>
+      <arch>m2560</arch>
+      <manualreset>true</manualreset>
+    </programmer>
+    <firmware
+       major="2"
+       minor="7"
+       relpath="firmware/MB-mb24-2560-v2.7.hex"
+       name="v2.7"
+       description="The v2.7 firmware for Generation 4 motherboards with Mega 2560."
+       />
+
+    <firmware
+       major="2"
+       minor="92"
+       relpath="firmware/MB-mb24-2560-v2.92.hex"
+       name="v2.92"
+       description="Firmware version 2.92 for Generation 4 motherboards with Mega 2560."
+       />
+
+    <firmware
+       major="2"
+       minor="9"
+       relpath="firmware/MB-mb24-v2.9-charles-2560.hex"
+       name="v2.9 (Slow SD)"
+       description="The v2.9 firmware for Generation 4 motherboards with Mega 2560, with the SD communications slowed by a factor of 8."
+       />
+
+  </board>
+
+  <board name="Extruder Controller v2.X (Gen3)">
+    <version major="2" minor="2"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>19200</speed>
+      <arch>m168</arch>
+    </programmer>
+
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv22-v2.6-relays.hex"
+       name="v2.6 w/ relays"
+       description="This firmware is for those using extruders with relay boards."
+       />
+    <firmware
+       major="2"
+       minor="6"
+       relpath="firmware/EC-ecv22-v2.6-no-relays.hex"
+       name="v2.6 w/o relays"
+       description="This firmware is for those using extruders without relay boards."
+       />
+
+    <firmware
+       major="2"
+       minor="5"
+       relpath="firmware/EC-ecv22-v2.5r0-mk5.hex"
+       name="v2.5 for mk5, release 0"
+       description="This firmware is for those using mk5 plastruders with relay boards."
+       />
+    <firmware
+       major="2"
+       minor="5"
+       relpath="firmware/EC-ecv22-v2.5r0-mk4.hex"
+       name="v2.5 for mk4, release 0"
+       description="This firmware is for those using old mk4 plastruders, or mk5s with no relay board."
+       />
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/EC-ecv22-v2.4r0.hex"
+       name="v2.4 for mk4"
+       description="This release is recommended for machines Mk. 4 extruders.  It includes separate PID settings for the heated platform and the extruder heater."
+       />
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/EC-ecv22-v2.4r0-relays.hex"
+       name="v2.4 for mk5 w/ relays"
+       description="This release is recommended for machines Mk V extruders using relay boards.  It includes separate PID settings for the heated platform and the extruder heater.&lt;br&gt;We recommend setting your PID parameters for the Mk V heaters to P=5,I=0.03,D=35."
+       />
+    <firmware
+       major="2"
+       minor="4"
+       relpath="firmware/EC-ecv22-v2.4-unicorn.hex"
+       name="v2.4 for unicorn"
+       description="This firmware is for those using a Unicorn pen plotter toolhead (or for those who want to experiment with servos on the D9 or D10 headers)."
+       />
+
+    <firmware
+       major="2"
+       minor="3"
+       relpath="firmware/EC-ecv22-v2.3r3-stepper.hex"
+       name="v2.3 release 3 w/ stepper support (beta)"
+       description="This firmware that uses a stepper motor instead of a DC motor to drive the filament.  The stepper is driven off the 1A/1B/2A/2B terminals, and half-steps at approx. 40Hz when the speed is set to 255.&lt;b&gt;This is beta firmware only for use with stepper extruders.&lt;/b&gt;"
+       />
+
+    <firmware
+       major="2"
+       minor="2"
+       relpath="firmware/EC-ecv22-v2.2r1.hex"
+       name="v2.2 release 1"
+       status="beta"
+       description="This is the first update to the v2 firmware."
+       />
+    <firmware
+       major="1"
+       minor="8"
+       relpath="firmware/ArduinoSlaveExtruder-v1.8.hex"/>
+    <firmware
+       name="v1.8 with heated platform support"
+       major="1"
+       minor="8"
+       relpath="firmware/ArduinoSlaveExtruder-v1.8.heated-platform.hex"/>
+    <firmware
+       major="1"
+       minor="6"
+       relpath="firmware/ArduinoSlaveExtruder-v1.6.hex"/>
+    <firmware
+       major="1"
+       minor="5"
+       relpath="firmware/ArduinoSlaveExtruder-v1.5.hex"/>
+    <firmware
+       major="1"
+       minor="4"
+       relpath="firmware/ArduinoSlaveExtruder-v1.4.hex"/>
+
+   <firmware
+       major="2"
+       minor="81"
+       relpath="firmware/EC-ecv22-v2.81-stepper-relays.hex"
+       name="v2.81 for stepper extruder with relays"
+       description="Koenkooi's custom firmware for stepper extruders with relay boards."
+       />
+    <firmware
+      major="2"
+      minor="81"
+      relpath="firmware/EC-ecv22-v2.81-stepper-no-relays.hex"
+      name="v2.81 for stepper extruder without relays"
+      description="Koenkooi's custom firmware for stepper extruders without relay boards."
+      />
+  </board>
+
+  <board name="Extruder Controller v3.X (Gen4)" icon="icon-ec36.png">
+    <version major="3" minor="6"/>
+    <programmer class="replicatorg.uploader.AvrdudeUploader">
+      <protocol>stk500v1</protocol>
+      <speed>19200</speed>
+      <arch>m168</arch>
+    </programmer>
+    <firmware
+       major="2"
+       minor="8"
+       relpath="firmware/EC-ecv34-v2.8-hotfix.hex"
+       name="v2.82"
+       description="The v2.8 hotfix."
+       />
+    <firmware
+       major="2"
+       minor="92"
+       relpath="firmware/EC-ecv34-v2.92.hex"
+       name="v2.92"
+       description="Beta version of the 2.92 firmware"
+       />
+  </board>
+</boards>
