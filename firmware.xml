@@ -1,7 +1,21 @@
 <boards>
   <!--
      Firmware for the RepRap Motherboard v1.1 and v1.2.
-    -->
+
+-->
+  <board name="MakerBot Replicator (MightyBoard)" icon="icon-mb24.png">
+   <version major="1" minor="5"/><!-- 5 for 'Hardware E'-->
+   <programmer class="replicatorg.uploader.AvrdudeUploader">
+	<protocol>stk500v1</protocol>
+	<speed>57600</speed>
+	<arch>m1280</arch>
+	<manualreset>true</manualreset>
+   </programmer>
+   <firmware major="4" minor="4"
+       relpath="firmware/Mighty-mb40-v4.4-beta.hex"
+       name="4.4" description="The Replicator firmware, version 4.4 (Beta)."/>
+   </board>
+
   <board name="RepRap Motherboard v1.X (Gen3)">
     <version major="1" minor="1"/>
     <version major="1" minor="2"/>
@@ -61,6 +75,13 @@
       <arch>m1280</arch>
       <manualreset>true</manualreset>
     </programmer>
+    <firmware
+       major="3"
+       minor="1"
+       relpath="firmware/MB-mb24-v3.1.hex"
+       name="v3.1"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Extruder Controller firmware 3.1 or newer. Requires ReplicatorG  0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+       />
    <firmware
        major="3"
        minor="0"
@@ -82,13 +103,6 @@
        name="v2.81"
        description="The v2.81 firmware for Generation 4 motherboards."
        />
-     <firmware
-       major="3"
-       minor="1"
-       relpath="firmware/MB-mb24-v3.1_BETA.hex"
-       name="Unsupported Beta"
-       description="Toolhead protocol changes in this version.  WARNING: Requires Extruder Controller firmware 3.1 or newer. Requires ReplicatorG  0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
-       />
   </board>
 
   <board name="MakerBot Motherboard v2.X (Gen4) with Mega 2560" icon="icon-mb24.png">
@@ -99,7 +113,14 @@
       <arch>m2560</arch>
       <manualreset>true</manualreset>
     </programmer>
-    <firmware
+     <firmware
+       major="3"
+       minor="1"
+       relpath="firmware/MB-mb24-2560-v3.1.hex"
+       name="3.1"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Extruder Controller firmware 3.1 or newer. Requires ReplicatorG  0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+       />
+      <firmware
        major="3"
        minor="0"
        relpath="firmware/MB-mb24-2560-v3.0.hex"
@@ -113,13 +134,7 @@
        name="v2.81"
        description="The v2.81 firmware for Generation 4 motherboards with Mega 2560."
        />
-     <firmware
-       major="3"
-       minor="1"
-       relpath="firmware/MB-mb24-2560-v3.1_BETA.hex"
-       name="Unsupported Beta"
-       description="Toolhead protocol changes in this version.  WARNING: Requires Extruder Controller firmware 3.1 or newer. Requires ReplicatorG  0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
-       />  </board>
+</board>
 
   <board name="Extruder Controller v2.X (Gen3)">
     <version major="2" minor="2"/>
@@ -128,6 +143,36 @@
       <speed>19200</speed>
       <arch>m168</arch>
     </programmer>
+<!--      <firmware
+       major="3"
+       minor="1"
+       relpath="firmware/EC-ecv22-v3.1-relays.hex"
+       name="v3.1 w/ relays"
+      description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+    /> 
+    <firmware
+       major="3"
+       minor="1"
+       relpath="firmware/EC-ecv22-v3.1-no-relays.hex"
+       name="v3.1 w/o relays"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+ 
+       />
+    <firmware
+       major="3"
+       minor="1"
+       relpath="firmware/EC-ecv22-v3.1-stepper-relays.hex"
+       name="v3.1 for stepper extruder w/ relays"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+       />
+    <firmware
+      major="3"
+      minor="1"
+      relpath="firmware/EC-ecv22-v3.1-stepper-no-relays.hex"
+      name="v3.1 for stepper extruder w/o relays"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
+      />
+-->
       <firmware
        major="3"
        minor="0"
@@ -268,32 +313,41 @@
       <arch>m168</arch>
     </programmer>
    <firmware
-      major="3"
-      minor="0"
+      major="3" minor="1"
+      relpath="firmware/EC-ecv34-v3.1.hex"
+      name="v3.1"
+       description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time." 
+      />   
+     <firmware
+      major="3" minor="0"
       relpath="firmware/EC-ecv34-v3.0.hex"
       name="v3.0"
        description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.0 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
       />  
 <firmware
-       major="2"
-       minor="7"
+       major="2" minor="7"
        relpath="firmware/EC-ecv34-v2.7.hex"
        name="v2.7"
        description="The v2.7 firmware for Generation 4 extruder controllers."
        />
     <firmware
-       major="2"
-       minor="8"
+       major="2" minor="8"
        relpath="firmware/EC-ecv34-v2.8.hex"
        name="v2.8"
        description="The v2.8 firmware for Generation 4 extruder controllers."
        />
-   <firmware
-      major="3"
-      minor="1"
-      relpath="firmware/EC-ecv34-v3.1_BETA.hex"
-      name="Unsupported Beta"
-       description="Toolhead protocol changes in this version.  WARNING: Requires Motherboard Firmware 3.1 or newer. Requires ReplicatorG 0027 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."
-      />  
    </board>
+   <board name="3G 5D Shield for 3G Hardware">
+	<version major="1" minor="1"/>
+	<programmer class="replicatorg.uploader.AvrdudeUploader">
+		<protocol>stk500v1</protocol>
+		<speed>38400</speed>
+		<arch>m644p</arch>
+		<manualreset>true</manualreset>
+	</programmer>
+	<firmware major="3" minor="1" 
+		relpath="firmware/MB-rrmbv12-5DShield-v3.1.hex" 
+		name="v3.1-3G 5D Shield" 
+		description="This is the specific firmware to support the 3G 5D Shield.  WARNING: Requires Extruder Controller firmware 3.0 or newer. Requires ReplicatorG 0026 (or newer). Please upgrade all 3 (Motherboard, Extruders, ReplicatorG) at this time."/>
+	</board>
 </boards>
