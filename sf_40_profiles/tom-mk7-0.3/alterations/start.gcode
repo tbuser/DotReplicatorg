@@ -2,7 +2,10 @@
 (This file is for 1.75mm ABS in a MK7 Extruder)
 G21 (set units to mm)
 G90 (set positioning to absolute)
-M104 S225 (set extruder temperature)
+G10 P2 X-16.5 Y0 Z0
+G10 P1 X16.55 Y0 Z0
+G55 (auto-adjusted for left/right dualstrusion config)
+M104 S225 T0 (set extruder temperature)
 M109 S110 T0 (set heated-build-platform temperature)
 M108 R5.0 (set extruder speed)
 M103 (Make sure extruder is off)
@@ -15,6 +18,4 @@ G161 X Y F2500 (home XY axes minimum)
 M132 X Y Z A B (Recall stored home offsets for XYZAB axis)
 (**** end homing ****)
 M6 T0 (wait for toolhead parts, nozzle, HBP, etc., to reach temperature)
-M6 T1
-G54
 (**** end of start.gcode ****)
