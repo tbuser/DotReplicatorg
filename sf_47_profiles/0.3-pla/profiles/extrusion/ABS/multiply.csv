@@ -1,10 +1,11 @@
 Format is tab separated multiply settings.
-Name                          	Value
+_Name                          	Value
 WindowPosition	700+0
 Open File for Multiply	
-Activate Multiply:	False
+Activate Multiply	False
 Center X (mm):	5.0
 Center Y (mm):	0.0
-Number of Columns (integer):	3
-Number of Rows (integer):	3
+Number of Columns (integer):	2
+Number of Rows (integer):	2
+Reverse Sequence every Odd Layer	False
 Separation over Perimeter Width (ratio):	5.0
